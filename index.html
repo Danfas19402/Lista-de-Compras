@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🛒 Lista de Compras</h1>
+      <button id="toggleTheme" class="btn tema">🌙</button>
+    </div>
+
+    <div class="input-box">
+      <input type="text" id="itemInput" placeholder="Digite um item...">
+      <button onclick="adicionarItem()" class="btn adicionar">+ Adicionar</button>
+    </div>
+
+    <div class="buttons">
+      <button onclick="mostrarTodos()" class="btn azul">Todos</button>
+      <button onclick="mostrarPendentes()" class="btn roxo">Pendentes</button>
+      <button onclick="mostrarComprados()" class="btn verde">Comprados</button>
+      <button onclick="limparLista()" class="btn vermelho">🗑 Limpar</button>
+    </div>
+
+    <div class="status">
+      <p>Total: <span id="total">0</span></p>
+      <p>Pendentes: <span id="pendentes">0</span></p>
+      <p>Comprados: <span id="comprados">0</span></p>
+    </div>
+
+    <ul id="lista"></ul>
+
+    <div class="empty">
+      <p>🛍 Sua lista está vazia</p>
+      <small>Adicione alguns itens para começar suas compras!</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
