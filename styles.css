@@ -1,0 +1,164 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0b1525;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.container {
+  background: #0f1e35;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: yellow;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+/* 🔹 Botões sempre iguais */
+.adicionar { background: #7f7bff; color: white; }
+.azul { background: #3b82f6; color: white; }
+.roxo { background: #9333ea; color: white; }
+.verde { background: #22c55e; color: white; }
+.vermelho { background: #ef4444; color: white; }
+.btn.tema { background: #7f7bff; color: white; font-size: 18px; padding: 6px 10px; }
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+ul li {
+  background: #1e2a47;
+  margin-bottom: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li.comprado {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.empty {
+  margin-top: 20px;
+  color: #9ca3af;
+}
+
+/* 🔹 Tema Claro */
+body.claro {
+  background: #f3f4f6;
+  color: #111;
+}
+
+body.claro .container {
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+body.claro h1 {
+  color: #3b82f6;
+}
+
+body.claro ul li {
+  background: #e5e7eb;
+  color: #111;
+}
+
+body.claro ul li.comprado {
+  color: #6b7280;
+}
+
+body.claro .empty {
+  color: #6b7280;
+}
+
+/* 🔹 Responsividade */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: auto;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .status {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+}
